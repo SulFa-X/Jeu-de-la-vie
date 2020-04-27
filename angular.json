@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "jeu-vie": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jeu-vie"
+    }
+  },
+  "defaultProject": "jeu-vie",
+  "cli": {
+    "analytics": "e5ab6422-1d45-4235-b648-d36fb9ec6612"
+  }
 }

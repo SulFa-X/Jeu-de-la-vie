@@ -1,0 +1,8 @@
+<table class="table">
+    <tr *ngFor="let row of population.rows ; let i = index">
+        <td (click)="population.toggleCell(i,j)" *ngFor="let col of row ; let j = index">
+            <div *ngIf="col === 1" class="cell"></div>
+        </td>
+    </tr>
+</table>
+
