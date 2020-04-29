@@ -38,7 +38,11 @@ export class Population {
             
             }
         }
-        this.rows = newRows;
+        for (let row = 0 ; row < this.nRows ; row++) {
+            for (let col = 0 ; col < this.nCols ; col++) {
+                this.rows[row][col] = newRows[row][col]
+            }
+        }
     }
   
     private countNeighbours(rowIndex: number, colIndex: number): number {
@@ -50,13 +54,6 @@ export class Population {
             + (this.hasCell(rowIndex + 1, colIndex - 1) ? 1 : 0)
             + (this.hasCell(rowIndex + 1, colIndex) ? 1 : 0)
             + (this.hasCell(rowIndex + 1, colIndex + 1) ? 1 : 0);
-    }
-  
-    autoGeneration(): void {
-        const delay = 1000;
-        interval(delay).subscribe(() => {
-            this.nextGeneration();
-        });
     }
   
 }
